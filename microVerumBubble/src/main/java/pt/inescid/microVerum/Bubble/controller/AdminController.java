@@ -4,14 +4,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import pt.inescid.microVerum.Bubble.domain.Ping;
+
 @RestController
 public class AdminController {
 	
 	
 	@RequestMapping("/admin/ping")
-	public String ping(@RequestParam(value="name", defaultValue="World") String name) {
+	public Ping ping(@RequestParam(value="name", defaultValue="World") String name) {
 		
-		return "Hello, " + name;
+		return new Ping(name);
 	}
 
 }

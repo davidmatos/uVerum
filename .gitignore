@@ -74,7 +74,7 @@ local.properties
 .scala_dependencies
 .worksheet
 
-RemoteSystemTempFile
+RemoteSystemsTempFiles
 
 Servers
 

@@ -1,13 +1,29 @@
 package pt.inescid.microVerum.Bubble.domain;
 
+import java.util.Calendar;
+
+import org.springframework.data.annotation.Id;
+
 public class Request {
 
+	@Id
 	private String id;
 	private long ts;
 	private String url;
 	private String request;
 	private String from;
 	private String to;
+	
+	
+	
+	public Request(String url, String request, String from, String to) {
+		super();
+		this.ts = Calendar.getInstance().getTimeInMillis();
+		this.url = url;
+		this.request = request;
+		this.from = from;
+		this.to = to;
+	}
 	public String getId() {
 		return id;
 	}

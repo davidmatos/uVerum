@@ -1,6 +1,7 @@
 package pt.inescid.microVerum.Bubble.domain;
 
 import java.util.Calendar;
+import java.util.Map;
 
 import org.springframework.data.annotation.Id;
 
@@ -13,16 +14,24 @@ public class Request {
 	private String request;
 	private String from;
 	private String to;
+	private String globalId;
+	private String method;
+	private Map<String, String[]> query;
 	
 	
 	
-	public Request(String url, String request, String from, String to) {
+	
+	public Request(String url, String request, String from, String to, String globalId, String method, Map<String, String[]> query) {
 		super();
+		//this.id = id;
 		this.ts = Calendar.getInstance().getTimeInMillis();
 		this.url = url;
 		this.request = request;
 		this.from = from;
-		this.to = to;
+		this.to= to;
+		this.globalId = globalId;
+		this.method = method;
+		this.query = query;
 	}
 	public String getId() {
 		return id;
@@ -54,12 +63,31 @@ public class Request {
 	public void setFrom(String from) {
 		this.from = from;
 	}
+	public String getGlobalId() {
+		return globalId;
+	}
+	public void setGlobalId(String globalId) {
+		this.globalId = globalId;
+	}
 	public String getTo() {
 		return to;
 	}
 	public void setTo(String to) {
 		this.to = to;
 	}
+	public String getMethod() {
+		return method;
+	}
+	public void setMethod(String method) {
+		this.method = method;
+	}
+	public Map<String, String[]> getQuery() {
+		return query;
+	}
+	public void setQuery(Map<String, String[]> query) {
+		this.query = query;
+	}
+	
 	
 	
 	

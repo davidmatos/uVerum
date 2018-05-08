@@ -15,5 +15,7 @@ public class AdminController {
 		
 		return new Ping(name);
 	}
+	
+	
 
 }

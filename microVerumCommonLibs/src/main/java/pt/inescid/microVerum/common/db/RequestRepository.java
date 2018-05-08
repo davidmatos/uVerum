@@ -1,9 +1,10 @@
-package pt.inescid.microVerum.Bubble.db;
+package pt.inescid.microVerum.common.db;
 
 import java.util.List;
 
-import pt.inescid.microVerum.Bubble.domain.Request;
 import org.springframework.data.mongodb.repository.MongoRepository;
+
+import pt.inescid.microVerum.common.domain.Request;
 
 
 public interface RequestRepository extends MongoRepository<Request, String> {

@@ -1,8 +1,6 @@
 package pt.inescid.microVerum.Bubble.controller;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.stream.Collectors;
 
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
@@ -13,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import pt.inescid.microVerum.Bubble.db.RequestRepository;
-import pt.inescid.microVerum.Bubble.domain.Ping;
-import pt.inescid.microVerum.Bubble.domain.Request;
+import pt.inescid.microVerum.common.db.RequestRepository;
+import pt.inescid.microVerum.common.domain.Ping;
+import pt.inescid.microVerum.common.domain.Request;
 
 @RestController
 public class BubbleController {

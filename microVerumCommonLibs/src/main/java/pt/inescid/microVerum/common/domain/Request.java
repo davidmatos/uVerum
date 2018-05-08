@@ -1,4 +1,4 @@
-package pt.inescid.microVerum.Bubble.domain;
+package pt.inescid.microVerum.common.domain;
 
 import java.util.Calendar;
 import java.util.Map;

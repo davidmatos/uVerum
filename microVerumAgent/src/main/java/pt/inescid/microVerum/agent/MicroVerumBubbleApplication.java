@@ -1,4 +1,4 @@
-package pt.inescid.microVerum.Bubble;
+package pt.inescid.microVerum.agent;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

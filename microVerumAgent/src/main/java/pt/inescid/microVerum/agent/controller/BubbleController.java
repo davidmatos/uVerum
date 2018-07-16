@@ -1,4 +1,4 @@
-package pt.inescid.microVerum.Bubble.controller;
+package pt.inescid.microVerum.agent.controller;
 
 import java.io.IOException;
 

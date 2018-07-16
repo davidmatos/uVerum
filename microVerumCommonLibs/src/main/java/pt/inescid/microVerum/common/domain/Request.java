@@ -8,15 +8,15 @@ import org.springframework.data.annotation.Id;
 public class Request {
 
 	@Id
-	private String id;
-	private long ts;
-	private String url;
-	private String request;
-	private String from;
-	private String to;
-	private String globalId;
-	private String method;
-	private Map<String, String[]> query;
+	public String id;
+	public long ts;
+	public String url;
+	public String request;
+	public String from;
+	public String to;
+	public String globalId;
+	public String method;
+	public Map<String, String[]> query;
 	
 	
 	

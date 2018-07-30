@@ -58,6 +58,11 @@ public class AgentController {
 			result += r.toString() + "\n";
 		}
 
+		
+		
+		System.out.println("Received a request  that will be forwarded");
+		System.out.println(result);
+		
 		RestTemplate restTemplate = new RestTemplate();
 		
 		

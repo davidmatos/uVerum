@@ -30,9 +30,6 @@ services:
   edge-router:
     image: weaveworksdemos/edge-router:0.1.1
     hostname: real-edge-router
-    ports:
-      - '80:80'
-      - '8080:8080'
     cap_drop:
       - all
     cap_add:
@@ -54,6 +51,9 @@ services:
         service: edge-router
         port: 80
     hostname: edge-router
+    ports:
+      - '80:80'
+      - '8080:8080'
     command: bash -c "./mvnw spring-boot:run ${service} ${port}"
     depends_on:
       - "microverum-db"

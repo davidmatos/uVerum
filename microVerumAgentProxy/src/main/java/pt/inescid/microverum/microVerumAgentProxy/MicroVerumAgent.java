@@ -57,30 +57,43 @@ public class MicroVerumAgent {
 		this.microVerumLogAddress = microVerumLogAddress;
 		this.microVerumLogPort = microVerumLogPort;
 		
+		
+		
 	}
 
 	public void startProxy() {
 		instance = this;
-		logger.info("Starting microVerumAgent");
+		logger.info("Starting microVerumAgent on port " + localPort);
+		
+		MicroVerumHTTPFilter microVerumHTTPFilter = new MicroVerumHTTPFilter(); 
 		
 		this.proxy = DefaultHttpProxyServer.bootstrap().withPort(localPort)
-				.withFiltersSource(new HttpFiltersSourceAdapter() {
-					public HttpFilters filterRequest(HttpRequest originalRequest, ChannelHandlerContext ctx) {
-						return new HttpFiltersAdapter(originalRequest) {
-							@Override
-							public HttpResponse clientToProxyRequest(HttpObject httpObject) {
-								// TODO: implement your filtering here
-								return null;
-							}
-
-							@Override
-							public HttpObject serverToProxyResponse(HttpObject httpObject) {
-								// TODO: implement your filtering here
-								return httpObject;
-							}
-						};
-					}
-				}).start();
+				.withFiltersSource(
+						
+						microVerumHTTPFilter
+						
+						
+//						new HttpFiltersSourceAdapter() {
+//					public HttpFilters filterRequest(HttpRequest originalRequest, ChannelHandlerContext ctx) {
+//						return new HttpFiltersAdapter(originalRequest) {
+//							@Override
+//							public HttpResponse clientToProxyRequest(HttpObject httpObject) {
+//								// TODO: implement your filtering here
+//								return null;
+//							}
+//
+//							@Override
+//							public HttpObject serverToProxyResponse(HttpObject httpObject) {
+//								// TODO: implement your filtering here
+//								return httpObject;
+//							}
+//						};
+//					}
+//				}
+				
+						
+						
+						).start();
 
 	}
 
@@ -88,7 +101,9 @@ public class MicroVerumAgent {
 		this.proxy.stop();
 	}
 
-	class RectifyHTTPFilter extends HttpFiltersSourceAdapter {
+	class MicroVerumHTTPFilter extends HttpFiltersSourceAdapter {
+		
+		
 
 		@Override
 		public HttpFilters filterRequest(HttpRequest originalRequest, ChannelHandlerContext ctx) {
@@ -102,12 +117,15 @@ public class MicroVerumAgent {
 
 					// AsyncLogWriter.getInstance().addLogHttpRequest(originalRequest.toString(),
 					// originalRequest.getUri());
-					originalRequest.setUri(serviceHostName + originalRequest.getUri());
+					originalRequest.setUri("http://" + serviceHostName + ":" + servicePort +  originalRequest.getUri());
+					
+					
 
 					LogWriter.getInstance().logRequest(originalRequest.toString());
 
 					URL obj = null;
 					try {
+						
 						obj = new URL(originalRequest.getUri());
 					} catch (MalformedURLException e1) {
 						e1.printStackTrace();

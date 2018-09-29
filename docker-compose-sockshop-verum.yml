@@ -223,6 +223,7 @@ services:
       - all
     read_only: true
     hostname: user-simulator
+    command: "-d 60 -r 200 -c 2 -h edge-router"
 
 
 
@@ -242,4 +243,3 @@ services:
     hostname: microverum-db
     restart: always
 
-command: "-d 60 -r 200 -c 2 -h edge-router"

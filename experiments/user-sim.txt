@@ -1,0 +1,55 @@
+
+
+SOCK-SHOP ONLY
+
+user-sim_1      | [2018-09-29 14:28:26,628] user-simulator/INFO/locust.runners: All locusts dead
+user-sim_1      | 
+user-sim_1      | [2018-09-29 14:28:26,628] user-simulator/INFO/locust.main: Shutting down (exit code 1), bye.
+user-sim_1      |  Name                                                          # reqs      # fails     Avg     Min     Max  |  Median   req/s
+user-sim_1      | --------------------------------------------------------------------------------------------------------------------------------------------
+user-sim_1      |  GET /                                                             22     0(0.00%)       6       5       9  |       6    1.00
+user-sim_1      |  GET /basket.html                                                  22     0(0.00%)       6       5      10  |       6    2.00
+user-sim_1      |  DELETE /cart                                                      22     0(0.00%)      18      13      26  |      16    2.00
+user-sim_1      |  POST /cart                                                        22     0(0.00%)      53      27     233  |      34    2.00
+user-sim_1      |  GET /catalogue                                                    22     0(0.00%)      13       9      55  |      11    1.00
+user-sim_1      |  GET /category.html                                                23     0(0.00%)       6       5       8  |       6    2.00
+user-sim_1      |  GET /detail.html?id=03fef6ac-1896-4ce8-bd69-b798f85c6e0b           2     0(0.00%)       6       6       6  |       6    0.00
+user-sim_1      |  GET /detail.html?id=3395a43e-2d88-40de-b95f-e00e1502085b           1     0(0.00%)       8       8       8  |       8    0.00
+user-sim_1      |  GET /detail.html?id=808a2de1-1aaa-4c25-a9b9-6612e8f29a38           2     0(0.00%)       8       8       8  |       8    0.00
+user-sim_1      |  GET /detail.html?id=819e1fbf-8b7e-4f6d-811f-693534916a8b           1     0(0.00%)       5       5       5  |       5    0.00
+user-sim_1      |  GET /detail.html?id=837ab141-399e-4c1f-9abc-bace40296bac           6     0(0.00%)      13       5      49  |       6    1.00
+user-sim_1      |  GET /detail.html?id=a0a4f044-b040-410d-8ead-4de0446aec7e           1     0(0.00%)       5       5       5  |       5    0.00
+user-sim_1      |  GET /detail.html?id=d3588630-ad8e-49df-bbd7-3167f7efb246           7     0(0.00%)       6       5      11  |       6    1.00
+user-sim_1      |  GET /detail.html?id=zzz4f044-b040-410d-8ead-4de0446aec7e           2     0(0.00%)       5       5       6  |       5    0.00
+user-sim_1      |  GET /login                                                        23     0(0.00%)      95      64     447  |      71    2.00
+user-sim_1      |  POST /orders                                                      20     2(9.09%)     205      94    1080  |     110    1.00
+user-sim_1      | --------------------------------------------------------------------------------------------------------------------------------------------
+user-sim_1      |  Total                                                            198     2(1.01%)                                      15.00
+user-sim_1      | 
+user-sim_1      | Percentage of the requests completed within given times
+user-sim_1      |  Name                                                           # reqs    50%    66%    75%    80%    90%    95%    98%    99%   100%
+user-sim_1      | --------------------------------------------------------------------------------------------------------------------------------------------
+user-sim_1      |  GET /                                                              22      6      6      6      6      7      8      9      9      9
+user-sim_1      |  GET /basket.html                                                   22      6      7      8      8      9     10     10     10     10
+user-sim_1      |  DELETE /cart                                                       22     16     19     19     22     25     25     26     26     26
+user-sim_1      |  POST /cart                                                         22     35     40     43     45     49    230    230    230    233
+user-sim_1      |  GET /catalogue                                                     22     11     11     11     12     12     20     55     55     55
+user-sim_1      |  GET /category.html                                                 23      6      6      7      7      8      8      8      8      8
+user-sim_1      |  GET /detail.html?id=03fef6ac-1896-4ce8-bd69-b798f85c6e0b            2      6      6      6      6      6      6      6      6      6
+user-sim_1      |  GET /detail.html?id=3395a43e-2d88-40de-b95f-e00e1502085b            1      8      8      8      8      8      8      8      8      8
+user-sim_1      |  GET /detail.html?id=808a2de1-1aaa-4c25-a9b9-6612e8f29a38            2      8      8      8      8      8      8      8      8      8
+user-sim_1      |  GET /detail.html?id=819e1fbf-8b7e-4f6d-811f-693534916a8b            1      5      5      5      5      5      5      5      5      5
+user-sim_1      |  GET /detail.html?id=837ab141-399e-4c1f-9abc-bace40296bac            6      6      6      6      6     49     49     49     49     49
+user-sim_1      |  GET /detail.html?id=a0a4f044-b040-410d-8ead-4de0446aec7e            1      5      5      5      5      5      5      5      5      5
+user-sim_1      |  GET /detail.html?id=d3588630-ad8e-49df-bbd7-3167f7efb246            7      6      6      9      9     11     11     11     11     11
+user-sim_1      |  GET /detail.html?id=zzz4f044-b040-410d-8ead-4de0446aec7e            2      6      6      6      6      6      6      6      6      6
+user-sim_1      |  GET /login                                                         23     71     73     73     74     79    280    450    450    447
+user-sim_1      |  POST /orders                                                       20    110    120    120    120   1100   1100   1100   1100   1080
+user-sim_1      | --------------------------------------------------------------------------------------------------------------------------------------------
+user-sim_1      | 
+user-sim_1      | Error report
+user-sim_1      |  # occurences       Error                                                                                               
+user-sim_1      | --------------------------------------------------------------------------------------------------------------------------------------------
+user-sim_1      |  2                  POST /orders: "HTTPError(u'406 Client Error: Not Acceptable for url: http://edge-router/orders',)"  
+user-sim_1      | --------------------------------------------------------------------------------------------------------------------------------------------
+user-sim_1      | 

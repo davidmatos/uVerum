@@ -1,6 +1,7 @@
 #running an image of mongo
 #docker run --name microverum-db -p 127.0.0.1:27017:27017/tcp -d mongo
-
+ 
+ 
 # Run from the parent folder
 # docker build -t agent -f agent/Dockerfile .
 

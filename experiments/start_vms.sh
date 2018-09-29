@@ -8,5 +8,5 @@ docker run --name catalogue-db --hostname catalogue-db -it weaveworksdemos/catal
 docker run --name catalogue --hostname catalogue -it weaveworksdemos/catalogue:0.3.5
 
 #start user-sim
-docker run --net=host weaveworksdemos/load-test -h 35.234.130.160 -r 100 -c 2
+docker run --net=host weaveworksdemos/load-test -h 35.234.130.160 -r 10000 -c 1000
 

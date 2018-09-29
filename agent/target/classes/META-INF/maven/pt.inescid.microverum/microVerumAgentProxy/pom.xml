@@ -13,6 +13,9 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
 		<local.port>8888</local.port>
 		<service.address>localhost</service.address>
 		<service.port>8080</service.port>
@@ -61,7 +64,7 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.25</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>pt.inescid.microVerum.commonLibs</groupId>
 			<artifactId>microVerumCommonLibs</artifactId>

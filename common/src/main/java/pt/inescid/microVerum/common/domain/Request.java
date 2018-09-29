@@ -61,7 +61,9 @@ public class Request {
 				this.query = new HashMap<String, String>();
 				for (int j = 0; j < parameters.length; j++) {
 					String[] parts = parameters[j].split("=");
-					this.query.put(parts[0], parts[1]);
+					if(parts.length==2) {						
+						this.query.put(parts[0], parts[1]);
+					}
 				}
 			}
 

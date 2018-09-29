@@ -115,6 +115,8 @@ public class MicroVerumAgent {
 						return null;
 					}
 
+					MicroVerumAgent.logger.info("Received request: " + originalRequest.getUri());
+					
 					// AsyncLogWriter.getInstance().addLogHttpRequest(originalRequest.toString(),
 					// originalRequest.getUri());
 					originalRequest.setUri("http://" + serviceHostName + ":" + servicePort +  originalRequest.getUri());
@@ -150,6 +152,7 @@ public class MicroVerumAgent {
 					int responseCode = 0;
 					try {
 						responseCode = con.getResponseCode();
+						
 					} catch (IOException e1) {
 						e1.printStackTrace();
 					}

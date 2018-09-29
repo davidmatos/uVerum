@@ -17,6 +17,9 @@ public class MicroVerumAgentApplication {
 		
 		
 		int localPort = 0;
+		
+		
+		
 		try {
 			localPort = Integer.parseInt(args[0]);
 		} catch (Exception e) {
@@ -24,10 +27,12 @@ public class MicroVerumAgentApplication {
 			printUsage();
 			System.exit(-1);
 		}
-
+		MicroVerumAgent.logger.info("Local port = " + localPort);
 		
 		
 		String serviceHostName = args[1];
+		
+		MicroVerumAgent.logger.info("Service hostname = " + serviceHostName);
 		
 		int servicePort = 0;
 		try {
@@ -37,9 +42,12 @@ public class MicroVerumAgentApplication {
 			printUsage();
 			System.exit(-1);
 		}
+		MicroVerumAgent.logger.info("Service port = " + servicePort);
 
 		
 		String microVerumLogAddress = args[3];
+		
+		MicroVerumAgent.logger.info("MicroVerumLogAddress = " + microVerumLogAddress);
 		
 		int microVerumLogPort = 0;
 		try {
@@ -49,12 +57,15 @@ public class MicroVerumAgentApplication {
 			printUsage();
 			System.exit(-1);
 		}
+		
+		MicroVerumAgent.logger.info("MicroVerumLogPort = " + microVerumLogPort);
 
 		boolean logMode = MicroVerumAgentConstants.LOG_ASYNC;
 		if(args.length > 5) {
 			if(args[5].equalsIgnoreCase("sync")) {
 				logMode = MicroVerumAgentConstants.LOG_SYNC;
 			}
+			MicroVerumAgent.logger.info("LogMode = " + args[5] );
 		}
 		
 		MicroVerumAgent agent = new MicroVerumAgent(localPort, serviceHostName, servicePort, microVerumLogAddress, microVerumLogPort);

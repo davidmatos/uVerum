@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  agent-user:
+    build: 
+      context: .
+      dockerfile: ./agent/Dockerfile
+    hostname: payment
+    command: bash -c "mvn exec:java -Dlocal.port=80 -Dservice.address=real-user -Dservice.port=80 -Dmicro.verum.log.address=microverum-db"
+    depends_on:
+      - "microverum-db"
+
+
+  microverum-db:
+    image: mongo:3.4
+    hostname: microverum-db
+    restart: always

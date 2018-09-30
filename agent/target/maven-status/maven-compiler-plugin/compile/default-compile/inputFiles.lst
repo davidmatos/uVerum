@@ -1,0 +1,7 @@
+/home/david/sts-workspace/microverum/agent/src/main/java/pt/inescid/microverum/microVerumAgentProxy/MicroVerumAgent.java
+/home/david/sts-workspace/microverum/agent/src/main/java/pt/inescid/microverum/microVerumAgentProxy/log/AsyncLogWriter.java
+/home/david/sts-workspace/microverum/agent/src/main/java/pt/inescid/microverum/microVerumAgentProxy/config/MicroVerumAgentConstants.java
+/home/david/sts-workspace/microverum/agent/src/main/java/pt/inescid/microverum/microVerumAgentProxy/log/SyncLogWriter.java
+/home/david/sts-workspace/microverum/agent/src/main/java/pt/inescid/microverum/microVerumAgentProxy/MicroVerumAgentApplication.java
+/home/david/sts-workspace/microverum/agent/src/main/java/pt/inescid/microverum/microVerumAgentProxy/log/LogWriter.java
+/home/david/sts-workspace/microverum/agent/src/main/java/pt/inescid/microverum/microVerumAgentProxy/log/MicroVerumMongoClient.java

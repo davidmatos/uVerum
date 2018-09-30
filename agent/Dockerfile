@@ -5,9 +5,9 @@
 # Run from the parent folder
 # docker build -t agent -f agent/Dockerfile .
 
-#FROM openjdk:8-jdk
-#RUN apt-get update && apt-get -y install maven
-FROM maven
+FROM openjdk:8-jdk
+RUN apt-get update && apt-get -y install maven
+#FROM maven
 
 
 COPY ./common /usr/src/common

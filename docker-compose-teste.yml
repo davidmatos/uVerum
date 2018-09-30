@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: ./agent/Dockerfile
     hostname: payment
-    command: bash -c "mvn exec:java -Dlocal.port=80 -Dservice.address=real-user -Dservice.port=80 -Dmicro.verum.log.address=microverum-db"
+    command: bash -c "cd /usr/src/common && mvn install && cd /usr/src/agent && mvn compile && mvn exec:java -Dlocal.port=80 -Dservice.address=real-user -Dservice.port=80 -Dmicro.verum.log.address=microverum-db"
     depends_on:
       - "microverum-db"
 

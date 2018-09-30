@@ -21,6 +21,7 @@
 		<service.port>8080</service.port>
 		<micro.verum.log.address>localhost</micro.verum.log.address>
 		<micro.verum.log.port>27017</micro.verum.log.port>
+		<micro.verum.log.mode>sync</micro.verum.log.mode>
 
 
 	</properties>
@@ -98,6 +99,7 @@
 						<argument>${service.port}</argument>
 						<argument>${micro.verum.log.address}</argument>
 						<argument>${micro.verum.log.port}</argument>
+						<argument>${micro.verum.log.mode}</argument>
 					</arguments>
 
 				</configuration>

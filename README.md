@@ -56,3 +56,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * **[Prof. Miguel Correia](https://github.com/mpcorreia)**
 * **[Prof. Miguel Pardal](https://github.com/miguelpardal)**
+* **[Prof. António Rito Silva](https://github.com/ritosilva)**

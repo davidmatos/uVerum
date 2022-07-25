@@ -37,6 +37,10 @@ Test the SockShop app:
 docker-compose -f docker-compose-sockshop.yml up
 ```
 
+To run the performance tests please install jMeter and load the test cases in `./experiments`. More information [here](https://jmeter.apache.org/usermanual/get-started.html).
+
+
+
 
 ## Built With
 

@@ -45,7 +45,7 @@ services:
     hostname: microverum-db
     restart: always
 
-  jmeter:
-    image: justb4/jmeter:3.3
-    hostname: jmeter
-    restart: always
+#  jmeter:
+#    image: justb4/jmeter:3.3
+#    hostname: jmeter
+#    restart: always

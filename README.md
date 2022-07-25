@@ -24,17 +24,17 @@ There are three docker-compose files that allow to automatically start the compo
 
 Test microVerum with a single agent:
 ```
-docker-compose -f docker-compose-single-service.yml
+docker-compose -f docker-compose-single-service.yml up
 ```
 
 Test microVerum with the SockShop app:
 ```
-docker-compose -f docker-compose-sockshop-verum.yml
+docker-compose -f docker-compose-sockshop-verum.yml up
 ```
 
 Test the SockShop app:
 ```
-docker-compose -f docker-compose-sockshop.yml
+docker-compose -f docker-compose-sockshop.yml up
 ```
 
 
